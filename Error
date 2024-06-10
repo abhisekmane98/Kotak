@@ -1,0 +1,4 @@
+dev.azure.com/ksec-devops/Matrix/_git/middleware.git/cmd/ks.com-middleware
+        imports dev.azure.com/ksec-devops/Matrix/_git/middleware.git/pkg/config
+        imports dev.azure.com/ksec-devops/Matrix/_git/middleware.git/pkg/handler
+        imports dev.azure.com/ksec-devops/Matrix/_git/middleware.git/pkg/config: import cycle not allowed
