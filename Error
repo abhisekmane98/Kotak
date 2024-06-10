@@ -2,3 +2,13 @@ dev.azure.com/ksec-devops/Matrix/_git/middleware.git/cmd/ks.com-middleware
         imports dev.azure.com/ksec-devops/Matrix/_git/middleware.git/pkg/config
         imports dev.azure.com/ksec-devops/Matrix/_git/middleware.git/pkg/handler
         imports dev.azure.com/ksec-devops/Matrix/_git/middleware.git/pkg/config: import cycle not allowed
+
+func NewManager(logger *ksutilities.AppLogger) *Manager {
+	ctx, cancel := context.WithCancel(context.Background())
+	return &Manager{
+		connectedClients: make(ClientMap),
+		logger:           logger,
+		Ctx:              ctx,
+		Cancel:           cancel,
+	}
+}
